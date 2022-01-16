@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
+use Barryvdh\DomPDF\PDF;
 use App\Models\Inmersion;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class InmersionController extends Controller
 {
@@ -36,8 +39,7 @@ class InmersionController extends Controller
     }
     public function show($id)
     {
-        $inmersiones = Inmersion::find($id);
-        return view('inmersiones.show', compact('inmersiones'));
+        //
     }
 
     public function edit($id)
@@ -71,6 +73,5 @@ class InmersionController extends Controller
     {
         $inmersiones = Inmersion::find($id)->delete();
         return redirect()->route('inmersiones.index');
-
-    }
+    }    
 }

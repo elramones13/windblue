@@ -10,11 +10,10 @@ class LocalizacionFactory extends Factory
     {
         return [
             'nombre' => $this->faker->city(),
-            'longitud' => $this->faker->longitude($min = -180, $max = 180),
             'latitud' => $this->faker->latitude($min = -90, $max = 90),
+            'longitud' => $this->faker->longitude($min = -180, $max = 180),
             'pais' => $this->faker->country(),
             'localidad' => $this->faker->state(),
-            'num_buceos' => $this->faker->randomNumber(),
         ];
     }
 }

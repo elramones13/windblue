@@ -4,7 +4,7 @@
     <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
         <div class="text-center">
             <h1 class="max-w-md mx-auto mt-3 text-xl leading-7 text-gray-500 dark:text-gray-400">
-               Gestionar registros de buceos y buceadores
+               Gestionar registros de inmersiones y buceadores
             </h1>
         </div>
     </div>

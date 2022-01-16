@@ -1,5 +1,11 @@
 @extends("layouts.app2")
 @section("contenido")
+<style>
+    .mapa{
+        width:50%;
+        height:50%;
+    }
+</style>
 <script>
     $(document).ready(function() {
         $('#tabla_localizaciones').DataTable({
@@ -49,11 +55,11 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
-                <th>Longitud</th>
                 <th>Latitud</th>
+                <th>Longitud</th>
                 <th>País</th>
                 <th>Localidad</th>
-                <th>Número de buceos</th>
+                <th>Número de Inmersiones</th>
                 <th>Editar localizacion</th>
                 <th>Eliminar localizacion</th>
             </tr>
@@ -63,11 +69,11 @@
             <tr data-id="{{$localizacion->id}}">
                 <td>{{$localizacion->id}}</td>
                 <td>{{$localizacion->nombre}}</td>
-                <td>{{$localizacion->longitud}}</td>
                 <td>{{$localizacion->latitud}}</td>
+                <td>{{$localizacion->longitud}}</td>
                 <td>{{$localizacion->pais}}</td>
                 <td>{{$localizacion->localidad}}</td>
-                <td>{{$localizacion->num_buceos}}</td>
+                <td>{{$localizacion->buceos->count()}}</td>
                 <td>
                     <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
                 </td>

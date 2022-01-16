@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Inmersion;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuceadorController;
 use App\Http\Controllers\InmersionController;
@@ -16,7 +15,6 @@ Route::resource('/buceadores', BuceadorController::class);
 Route::resource('/instructores', InstructorController::class);
 Route::resource('/inmersiones', InmersionController::class);
 Route::resource('/localizaciones', LocalizacionController::class);
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');

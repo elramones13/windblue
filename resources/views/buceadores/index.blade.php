@@ -44,15 +44,13 @@
     @if(count($buceadores))
     <a href=" {{url('/buceadores/create')}}" class="btn btn-primary" padding="10px">Nuevo buceador</a>
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
-
-    <table id="tabla" class="table table-striped table-bordered">
+    <table id="tabla_buceadores" class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Dni</th>
                 <th>Nombre</th>
-                <th>Apellido 1</th>
-                <th>Apellido 2</th>
+                <th>Apellidos</th>
                 <th>Fecha Nacimiento</th>
                 <th>Edad</th>
                 <th>Titulo de buceo</th>
@@ -70,8 +68,7 @@
                 <td>{{$buceador->id}}</td>
                 <td>{{$buceador->dni}}</td>
                 <td>{{$buceador->nombre}}</td>
-                <td>{{$buceador->apellido1}}</td>
-                <td>{{$buceador->apellido2}}</td>
+                <td>{{$buceador->apellido1}} {{$buceador->apellido2}}</td>
                 <td>{{$buceador->f_nacimiento}}</td>
                 <td>{{\Carbon\Carbon::parse($buceador->f_nacimiento)->diff(\Carbon\Carbon::now())->format('%y');}}</td>
                 <td>{{$buceador->t_buceo}}</td>

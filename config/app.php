@@ -163,10 +163,10 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\DomPdf\ServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
-
         /*
          * Application Service Providers...
          */

@@ -9,6 +9,6 @@ class InstructorSeeder extends Seeder
 {
     public function run()
     {
-        Instructor::factory()->count(5)->create();
+        //
     }
 }

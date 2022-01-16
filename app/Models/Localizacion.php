@@ -11,4 +11,9 @@ class Localizacion extends Model
     protected $table = "localizaciones";
     public $timestamps = false;
     protected $guarded = ['id'];
+
+    public function buceos()
+    {
+        return $this->hasMany(Inmersion::class);
+    }
 }

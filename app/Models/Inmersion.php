@@ -17,7 +17,7 @@ class Inmersion extends Model
     }
     public function localizacion()
     {
-        return $this->belongsTo(Localizacion::class, 'localizacion_id');
+        return $this->belongsTo(Localizacion::class);
     }
 }
 

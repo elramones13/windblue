@@ -51,6 +51,7 @@
     @if(count($inmersiones))
     <a href=" {{url('/inmersiones/create')}}" class="btn btn-primary" padding="10px">Nueva inmersion</a>
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
+    <a href=" {{url('/inmersiones/imprimir')}}" class="btn btn-danger" padding="10px">PDF</a>
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
         <thead>
             <tr>
@@ -72,7 +73,7 @@
         <tbody>
             @foreach($inmersiones as $inmersion)
             <tr data-id="{{$inmersion->id}}">
-                <td><a href="{{url('/inmersiones')}}/{{$inmersion->id}}/show">{{$inmersion->id}}</a></td>
+                <td>{{$inmersion->id}}</a></td>
                 <td>{{$inmersion->localizacion_id}}</td>
                 <td>{{$inmersion->fecha}}</td>
                 <td>{{$inmersion->t_total}}</td>

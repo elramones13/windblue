@@ -11,11 +11,10 @@ class CreateLocalizacionsTable extends Migration
         Schema::create('localizaciones', function (Blueprint $table) {
             $table->id('id');
             $table->string('nombre', 25);
-            $table->float('longitud');
             $table->float('latitud');
+            $table->float('longitud');
             $table->string('pais', 30);
             $table->string('localidad', 30);
-            $table->integer('num_buceos');
         });
     }
     public function down()

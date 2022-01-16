@@ -50,8 +50,7 @@
                 <th>Id</th>
                 <th>Dni</th>
                 <th>Nombre</th>
-                <th>Apellido 1</th>
-                <th>Apellido 2</th>
+                <th>Apellidos</th>
                 <th>Fecha Nacimiento</th>
                 <th>Edad</th>
                 <th>Email</th>
@@ -69,8 +68,7 @@
                 <td>{{$instructor->id}}</td>
                 <td>{{$instructor->dni}}</td>
                 <td>{{$instructor->nombre}}</td>
-                <td>{{$instructor->apellido1}}</td>
-                <td>{{$instructor->apellido2}}</td>
+                <td>{{$instructor->apellido1}} {{$instructor->apellido2}}</td>
                 <td>{{$instructor->f_nacimiento}}</td>
                 <td>{{\Carbon\Carbon::parse($instructor->f_nacimiento)->diff(\Carbon\Carbon::now())->format('%y');}}</td>
                 <td>{{$instructor->email}}</td>

@@ -23,11 +23,10 @@ class LocalizacionController extends Controller
             'longitud' => 'required',
             'latitud' => 'required',
             'pais' => 'required',
-            'localidad' => 'required',
-            'num_buceos' => 'required'
+            'localidad' => 'required'
         ]);
         Localizacion::create($request->all());
-        return redirect()->route('localizaciones.index');
+        return redirect()->route('localizaciones.index')->with('info', 'Localizacion creada exitosamente');
     }
     public function show(Localizacion $Localizacion)
     {
@@ -47,14 +46,13 @@ class LocalizacionController extends Controller
             'longitud' => 'required',
             'latitud' => 'required',
             'pais' => 'required',
-            'localidad' => 'required',
-            'num_buceos' => 'required'
+            'localidad' => 'required'
         ]);
 
         $localizaciones = Localizacion::find($id);
         $localizaciones->update($request->all());
 
-        return redirect()->route('localizaciones.index');
+        return redirect()->route('localizaciones.index')->with('info', 'Localizacion editada exitosamente');
     }
 
     public function destroy($id)
