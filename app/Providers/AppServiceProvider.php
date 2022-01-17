@@ -15,9 +15,6 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        //URL::forceScheme('https');
-        //if (DB::connection() instanceof \Illuminate\Database\SQLiteConnection) {
-         //   DB::statement(DB::raw('PRAGMA foreign_keys=1'));
-        //}
+        URL::forceScheme('https');
     }
 }

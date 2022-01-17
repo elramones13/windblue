@@ -12,7 +12,7 @@ class Localizacion extends Model
     public $timestamps = false;
     protected $guarded = ['id'];
 
-    public function buceos()
+    public function inmersiones()
     {
         return $this->hasMany(Inmersion::class);
     }

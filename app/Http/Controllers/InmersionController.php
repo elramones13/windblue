@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 
-use Barryvdh\DomPDF\PDF;
 use App\Models\Inmersion;
+use App\Models\Localizacion;
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,10 +16,18 @@ class InmersionController extends Controller
         $inmersiones = Inmersion::all();
         return view('inmersiones.index', compact('inmersiones'));
     }
+    public function imprimir(){
+        $inmersiones = Inmersion::all();
+        $pdf = \PDF::loadView('pdfs.inmersiones',compact('inmersiones'));
+        return $pdf->download('inmersiones_logs.pdf');
+    }
 
     public function create()
     {
-        return view('inmersiones.create')->with('info', 'Inmersion creada exitosamente');
+        $localizaciones = Localizacion::all();
+        $instructores = Instructor::all();
+        $inmersiones = Inmersion::all();
+        return view('inmersiones.create',compact('inmersiones','localizaciones','instructores'))->with('info', 'Inmersion creada exitosamente');
     }
     public function store(Request $request)
     {
@@ -44,8 +53,10 @@ class InmersionController extends Controller
 
     public function edit($id)
     {
+        $localizaciones = Localizacion::all();
+        $instructores = Instructor::all();
         $inmersiones = Inmersion::find($id);
-        return view('inmersiones.edit', compact('inmersiones'));
+        return view('inmersiones.edit',compact('inmersiones','localizaciones','instructores'))->with('info', 'Inmersion editada exitosamente');
     }
 
     public function update(Request $request, $id)

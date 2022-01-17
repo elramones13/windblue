@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Instructor;
+use App\Models\Inmersion;
 use Illuminate\Http\Request;
+use App\Rules\ValidarDni;
 
 class InstructorController extends Controller
 {
@@ -20,7 +22,7 @@ class InstructorController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'dni' => 'required',
+            'dni' => [new ValidarDni],
             'nombre' => 'required',
             'apellido1' => 'required',
             'apellido2' => 'required',
@@ -31,7 +33,7 @@ class InstructorController extends Controller
             'cert_instructor' => 'required'
         ]);
         Instructor::create($request->all());
-        return redirect()->route('instructores.index');
+        return redirect()->route('instructores.index')->with('info', 'Instructor creado exitosamente');
     }
     public function show(Instructor $Instructor)
     {
@@ -47,7 +49,7 @@ class InstructorController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'dni' => 'required',
+            'dni' => [new ValidarDni],
             'nombre' => 'required',
             'apellido1' => 'required',
             'apellido2' => 'required',
@@ -61,7 +63,7 @@ class InstructorController extends Controller
         $instructores = Instructor::find($id);
         $instructores->update($request->all());
 
-        return redirect()->route('instructores.index');
+        return redirect()->route('instructores.index')->with('info', 'Instructor editado exitosamente');
     }
 
     public function destroy($id)

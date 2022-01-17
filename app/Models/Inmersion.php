@@ -12,12 +12,16 @@ class Inmersion extends Model
     public $timestamps = false;
     protected $guarded = ['id'];
 
-    public function instructores(){
+    public function instructores()
+    {
         return $this->belongsTo(Instructor::class);
     }
-    public function localizacion()
+    public function localizaciones()
     {
         return $this->belongsTo(Localizacion::class);
+    }
+    public function inmersiones(){
+        return $this->belongsTo(Inmersion::class);
     }
 }
 

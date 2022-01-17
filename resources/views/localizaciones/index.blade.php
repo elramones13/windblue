@@ -73,7 +73,7 @@
                 <td>{{$localizacion->longitud}}</td>
                 <td>{{$localizacion->pais}}</td>
                 <td>{{$localizacion->localidad}}</td>
-                <td>{{$localizacion->buceos->count()}}</td>
+                <td>{{$localizacion->inmersiones->count()}}</td>
                 <td>
                     <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
                 </td>

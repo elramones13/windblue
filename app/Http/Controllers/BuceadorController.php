@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Buceador;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Rules\ValidarDni;
 
 class BuceadorController extends Controller
 {
@@ -21,7 +22,7 @@ class BuceadorController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'dni' => 'required',
+            'dni' => [new ValidarDni],
             'nombre' => 'required',
             'apellido1' => 'required',
             'apellido2' => 'required',
@@ -49,7 +50,7 @@ class BuceadorController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'dni' => 'required',
+            'dni' => [new ValidarDni],
             'nombre' => 'required',
             'apellido1' => 'required',
             'apellido2' => 'required',

@@ -10,13 +10,12 @@
     @csrf
     @method("POST")
     <div class="form-group">
-        <label for="id">ID</label>
-        <input type="text" class="form-control" id="id" name="id" placeholder="Id">
-    </div>
-    <div class="form-group">
-        <label for="localizacion_id">Selecciona una localizacion:</label>
-        <select name="localizacion_id" class="form-control">
-        </select>
+    <label for="prof_max">Localización</label>
+    <select class="form-control" id="select_localizacion" name="localizacion_id">
+        @foreach($localizaciones as $localizacion )
+          <option value="{{$localizacion->id}}">{{$localizacion->id}} - {{$localizacion->nombre}}</option>
+        @endforeach
+    </select>
     </div>
     <div class="form-group">
         <label for="fecha">Fecha</label>
@@ -47,8 +46,12 @@
         <input type="text" class="form-control" id="prof_max" name="prof_max" placeholder="PROFUNDIDAD MAXIMA">
     </div>
     <div class="form-group">
-        <label for="instructor_id">Nombre Instructor</label>
-        <input type="text" class="form-control" id="instructor_id" name="instructor_id" placeholder="ID INSTRUCTOR">
+    <label for="instructor_id">Instructor</label>
+    <select class="form-control" id="select_instructor" name="instructor_id">
+        @foreach($instructores as $instructor )
+          <option value="{{$instructor->id}}">{{$instructor->id}} - {{$instructor->nombre}} {{$instructor->apellido1}}</option>
+        @endforeach
+    </select>
     </div>
     <div class="form-group">
         <label for="num_buceadores">Numero de Buceadores</label>

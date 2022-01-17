@@ -49,9 +49,9 @@
 <body>
     <h1 id="titulot"> Tabla de Inmersiones</h1>
     @if(count($inmersiones))
-    <a href=" {{url('/inmersiones/create')}}" class="btn btn-primary" padding="10px">Nueva inmersion</a>
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
-    <a href=" {{url('/inmersiones/imprimir')}}" class="btn btn-danger" padding="10px">PDF</a>
+    <a href=" {{url('/inmersiones/create')}}" class="btn btn-primary" padding="10px">Nueva inmersion</a>
+    <a href=" {{url('/inmersionespdf')}}" class="btn btn-danger" padding="10px">Generar PDF</a>
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
         <thead>
             <tr>

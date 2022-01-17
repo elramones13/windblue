@@ -7,7 +7,11 @@
     @method("PUT")
     <div class="form-group">
         <label for="localizacion_id">Lugar</label>
-        <input type="text" class="form-control" id="localizacion_id" name="localizacion_id" placeholder="ID localizacion" value="{{$inmersiones->localizacion_id}}">
+        <select class="form-control" id="select_localizacion" name="localizacion_id">
+        @foreach($localizaciones as $localizacion)
+                <option type="text" class="form-control" id="localizacion_id" name="localizacion_id" value="{{$localizacion->id}}">{{$localizacion->id}} - {{$localizacion->nombre}}</option>
+            @endforeach
+        </select>    
     </div>
     <div class="form-group">
         <label for="fecha">Fecha</label>
@@ -38,8 +42,12 @@
         <input type="text" class="form-control" id="prof_max" name="prof_max" placeholder="prof_max" value="{{$inmersiones->prof_max}}">
     </div>
     <div class="form-group">
-        <label for="instructor_id">Nombre Instructor</label>
-        <input type="text" class="form-control" id="instructor_id" name="instructor_id" placeholder="id del instructor" value="{{$inmersiones->instructor_id}}">
+        <label for="instructor_id">Instructor</label>
+        <select class="form-control" id="select_instructor" name="instructor_id">
+        @foreach($instructores as $instructor )
+                <option type="text" class="form-control" id="instructor_id" name="instructor_id" value="{{$instructor->id}}">{{$instructor->id}} - {{$instructor->nombre}} {{$instructor->apellido1}}</option>
+            @endforeach
+        </select>
     </div>
     <div class="form-group">
         <label for="num_buceadores">Numero de Buceadores</label>

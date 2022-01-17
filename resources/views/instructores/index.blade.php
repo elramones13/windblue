@@ -75,7 +75,7 @@
                 <td>{{$instructor->telefono}}</td>
                 <td>{{$instructor->pais}}</td>
                 <td>{{$instructor->cert_instructor}}</td>
-                <td>{{$instructor->inmersion->count()}}</td>
+                <td><a href="{{url('/inmersiones')}}/{{$instructor->id}}">{{$instructor->inmersiones->count()}}</a></td>
                 <td>
                     <a href="{{url('/instructores')}}/{{$instructor->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
                 </td>
