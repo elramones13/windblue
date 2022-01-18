@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <h3 id="titulot"> Tabla de Localizaciones</h3>
+    <h1 id="titulot"> Tabla de Localizaciones</h1>
     @if(count($localizaciones))
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
     <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary" padding="10px">Nueva localización</a>
