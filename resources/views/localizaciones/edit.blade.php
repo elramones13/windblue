@@ -26,10 +26,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Guardar</button>
     <a href="{{url('/localizaciones')}}" class="btn btn-secondary">Cancelar</a>
-    <div class="mapa">
-        <x-maps-leaflet 
-        :centerPoint="['lat'=>28.9191017109435,'long'=>-13.6686174948405]" 
-        :zoomLevel="12">
-        </x-maps-leaflet>
-    </div>
     @endsection

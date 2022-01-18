@@ -24,7 +24,7 @@
       box-shadow: 0px 0px 30px;
       border: 1px solid lightgrey;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 0.6em;
+      font-size: 1em;
     }
 
     #logout {
@@ -107,17 +107,12 @@
       position: relative;
       display: inline-block;
       font-size: 2em;
-      box-shadow: 1px 2px 5px grey;
-      border-radius: 10px;
       padding: 5px;
       background-color: white;
     }
 
     .style-2 a:hover {
-      box-shadow: 1px 2px 5px black;
-      border-radius: 10px;
       transition: 1.5s;
-
     }
 
     .style-2 a:before {
@@ -206,6 +201,7 @@
     table td {
       word-wrap: break-word;
       max-width: 400px;
+      text-align: center;
     }
 
     #titulot {
@@ -241,6 +237,7 @@
     </ul>
   </div>
   @endif
+
   <div class="card-body">
     @if(session('info'))
     <div class="alert alert-success">
@@ -248,8 +245,8 @@
     </div>
     @endif
   </div>
-  @yield("contenido")
 
+  @yield("contenido")
 </body>
 
 </html>

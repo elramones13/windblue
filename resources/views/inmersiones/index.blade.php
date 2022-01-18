@@ -58,12 +58,12 @@
                 <th>Id</th>
                 <th>Localizacion ID</th>
                 <th>Fecha</th>
-                <th>Tiempo Total</th>
-                <th>Temperatura</th>
-                <th>Consumo</th>
-                <th>Lastre</th>
+                <th>Tiempo Total (Minutos)</th>
+                <th>Temperatura (ºC)</th>
+                <th>Consumo (Bar)</th>
+                <th>Lastre (Kg)</th>
                 <th>Litros de la botella</th>
-                <th>Profundidad Máxima</th>
+                <th>Profundidad Máxima (metros)</th>
                 <th>Instructor ID</th>
                 <th>Nº Buceadores</th>
                 <th></th>
@@ -74,7 +74,7 @@
             @foreach($inmersiones as $inmersion)
             <tr data-id="{{$inmersion->id}}">
                 <td>{{$inmersion->id}}</a></td>
-                <td>{{$inmersion->localizacion_id}}</td>
+                <td><a href="{{url('/localizaciones')}}/{{$inmersion->localizacion_id}}/mostrar" class='btn btn-success btn-sm'>{{$inmersion->localizacion_id}}</a></td>
                 <td>{{$inmersion->fecha}}</td>
                 <td>{{$inmersion->t_total}}</td>
                 <td>{{$inmersion->temperatura}}</td>
@@ -82,7 +82,7 @@
                 <td>{{$inmersion->lastre}}</td>
                 <td>{{$inmersion->litros_bot}}</td>
                 <td>{{$inmersion->prof_max}}</td>
-                <td>{{$inmersion->instructor_id}}</td>
+                <td><a href="{{url('/instructores')}}/{{$inmersion->instructor_id}}/mostrar" class='btn btn-primary btn-sm'>{{$inmersion->instructor_id}}</a></td>
                 <td>{{$inmersion->num_buceadores}}</td>
                 <td>
                     <a href="{{url('/inmersiones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>

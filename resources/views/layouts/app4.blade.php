@@ -37,6 +37,7 @@
     #titulot {
       text-align: center;
       text-decoration: underline;
+      font-size: 1.5em;
     }
 
     .logo {

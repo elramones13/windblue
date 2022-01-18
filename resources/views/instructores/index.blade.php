@@ -40,10 +40,10 @@
 </head>
 
 <body>
-    <h1 id="titulot"> Tabla de instructores</h1>
+    <h1 id="titulot"> Tabla de Instructores</h1>
     @if(count($instructores))
-    <a href=" {{url('/instructores/create')}}" class="btn btn-primary" padding="10px">Nuevo instructor</a>
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
+    <a href=" {{url('/instructores/create')}}" class="btn btn-primary" padding="10px">Nuevo instructor</a>
     <table id="tabla_instructores" class="table table-striped table-bordered ">
         <thead>
             <tr>
@@ -75,7 +75,7 @@
                 <td>{{$instructor->telefono}}</td>
                 <td>{{$instructor->pais}}</td>
                 <td>{{$instructor->cert_instructor}}</td>
-                <td><a href="{{url('/inmersiones')}}/{{$instructor->id}}">{{$instructor->inmersiones->count()}}</a></td>
+                <td><a href="{{url('/instructores')}}/{{$instructor->id}}/recuento" class='btn btn-warning btn-sm'>{{$instructor->inmersiones->count()}}</a></td>
                 <td>
                     <a href="{{url('/instructores')}}/{{$instructor->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
                 </td>

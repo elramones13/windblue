@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Localizacion;
+use App\Models\Inmersion;
 use Illuminate\Http\Request;
 
 class LocalizacionController extends Controller
@@ -28,9 +29,10 @@ class LocalizacionController extends Controller
         Localizacion::create($request->all());
         return redirect()->route('localizaciones.index')->with('info', 'Localizacion creada exitosamente');
     }
-    public function show(Localizacion $Localizacion)
+    public function mapas($id)
     {
-        //
+        $localizaciones = Localizacion::find($id);
+        return view('localizaciones.maps', compact('localizaciones'));
     }
 
     public function edit($id)
@@ -59,5 +61,11 @@ class LocalizacionController extends Controller
     {
         $localizaciones = Localizacion::find($id)->delete();
         return redirect()->route('localizaciones.index');
+    }
+    public function buceos($id)
+    {
+        $inmersiones = Inmersion::all();
+        $localizaciones = Localizacion::find($id);
+        return view('localizaciones.buceos', compact('localizaciones','inmersiones'));
     }
 }

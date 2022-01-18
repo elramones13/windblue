@@ -19,7 +19,7 @@
     <label for="duda">Duda</label>
         <textarea type="text-area" class="form-control" id="duda" name="duda" placeholder="Escriba su Duda aquí"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-    <a href="{{url('/dashboard')}}" class="btn btn-secondary">Volver</a>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    <a href="{{url('/dashboard')}}" class="btn btn-secondary">Cancelar</a>
 </form>
 @endsection

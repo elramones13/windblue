@@ -35,9 +35,11 @@ class InstructorController extends Controller
         Instructor::create($request->all());
         return redirect()->route('instructores.index')->with('info', 'Instructor creado exitosamente');
     }
-    public function show(Instructor $Instructor)
-    {
-        //
+    public function show($id)
+    {   
+        $inmersiones = Inmersion::all();
+        $instructores = Instructor::find($id);
+        return view('instructores.show', compact('instructores'));
     }
 
     public function edit($id)
@@ -70,5 +72,17 @@ class InstructorController extends Controller
     {
         $instructores = Instructor::find($id)->delete();
         return redirect()->route('instructores.index');
+    }
+    public function recuento($id)
+    {
+        $inmersiones = Inmersion::all();
+        $instructores = Instructor::find($id);
+        return view('instructores.recuento', compact('instructores','inmersiones'));
+    }
+    public function logs($id){
+        $inmersiones = Inmersion::all();
+        $instructores = Instructor::find($id);
+        $pdf = \PDF::loadView('pdfs.instructores',compact('inmersiones','instructores'));
+        return $pdf->download('inmersiones_logs_instructores.pdf');
     }
 }

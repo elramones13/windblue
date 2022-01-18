@@ -1,11 +1,5 @@
 @extends("layouts.app2")
 @section("contenido")
-<style>
-    .mapa{
-        width:50%;
-        height:50%;
-    }
-</style>
 <script>
     $(document).ready(function() {
         $('#tabla_localizaciones').DataTable({
@@ -48,8 +42,8 @@
 <body>
     <h3 id="titulot"> Tabla de Localizaciones</h3>
     @if(count($localizaciones))
-    <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary" padding="10px">Nuevo localizacion</a>
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
+    <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary" padding="10px">Nueva localización</a>
     <table id="tabla_localizaciones" class="table table-striped table-bordered">
         <thead>
             <tr>
@@ -60,6 +54,7 @@
                 <th>País</th>
                 <th>Localidad</th>
                 <th>Número de Inmersiones</th>
+                <th>Mapa</th>
                 <th>Editar localizacion</th>
                 <th>Eliminar localizacion</th>
             </tr>
@@ -73,7 +68,10 @@
                 <td>{{$localizacion->longitud}}</td>
                 <td>{{$localizacion->pais}}</td>
                 <td>{{$localizacion->localidad}}</td>
-                <td>{{$localizacion->inmersiones->count()}}</td>
+                <td><a href="{{url('/localizaciones')}}/{{$localizacion->id}}/buceos" class='btn btn-warning btn-sm'>{{$localizacion->inmersiones->count()}}</a></td>
+                <td>
+                    <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/mapas" class='btn btn-info btn-sm edit'>Mapa</a>
+                </td>
                 <td>
                     <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
                 </td>

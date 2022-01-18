@@ -40,10 +40,10 @@
 </head>
 
 <body>
-    <h3 id="titulot"> Tabla de Buceadores</h3>
+    <h1 id="titulot"> Tabla de Buceadores</h1>
     @if(count($buceadores))
-    <a href=" {{url('/buceadores/create')}}" class="btn btn-primary" padding="10px">Nuevo buceador</a>
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
+    <a href=" {{url('/buceadores/create')}}" class="btn btn-primary" padding="10px">Nuevo buceador</a>
     <table id="tabla_buceadores" class="table table-striped table-bordered">
         <thead>
             <tr>

@@ -47,8 +47,10 @@ class InmersionController extends Controller
         return redirect()->route('inmersiones.index');
     }
     public function show($id)
-    {
-        //
+    {   
+        $inmersiones = Inmersion::all();
+        $localizaciones = Localizacion::find($id);
+        return view('localizaciones.show', compact('localizaciones'));
     }
 
     public function edit($id)
@@ -85,4 +87,5 @@ class InmersionController extends Controller
         $inmersiones = Inmersion::find($id)->delete();
         return redirect()->route('inmersiones.index');
     }    
+    
 }
