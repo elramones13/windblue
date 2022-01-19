@@ -41,7 +41,7 @@
 
 <body>
 <form action="{{url('/localizaciones/')}}/{{$localizaciones->id}}" method="post">
-    <h1 id="titulot"> Información de {{$localizaciones->nombre}}</h1>
+    <h1 id="titulot"> Información de {{$localizaciones->nombre}} ID {{$localizaciones->id}}</h1>
     <a href=" {{url('/inmersiones')}}" class="btn btn-success" padding="10px">Volver</a>
     <table id="tabla_localizaciones" class="table table-striped table-bordered">
         <thead>

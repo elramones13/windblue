@@ -43,8 +43,7 @@
 <body></body>
 <form action="{{url('/localizaciones/')}}/{{$localizaciones->id}}" method="post">
     <h1 id="titulot"> Recuento de Inmersiones {{$localizaciones->nombre}} ID {{$localizaciones->id}}</h1>
-    <a href=" {{url('/localizaciones')}}" class="btn btn-success" padding="10px">Inicio</a>
-    <a href=" {{url('/instructorespdf')}}/{{$localizaciones->id}}" class="btn btn-danger" padding="10px">Generar PDF</a>
+    <a href=" {{url('/localizaciones')}}" class="btn btn-success" padding="10px">Volver</a>
     @if(count($inmersiones)>0)
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
         <thead>
@@ -74,7 +73,7 @@
                 <td>{{$inmersion->lastre}}</td>
                 <td>{{$inmersion->litros_bot}}</td>
                 <td>{{$inmersion->prof_max}}</td>
-                <td><a href="{{url('/instructores')}}/{{$inmersion->instructor_id}}/recuento" class='btn btn-primary btn-sm'>{{$inmersion->instructor_id}}</a></td>
+                <td><a href="{{url('/instructores')}}/{{$inmersion->instructor_id}}/mostrar" class='btn btn-primary btn-sm'>{{$inmersion->instructor_id}}</a></td>
                 <td>{{$inmersion->num_buceadores}}</td>
                 <td>
                     <a href="{{url('/localizaciones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
