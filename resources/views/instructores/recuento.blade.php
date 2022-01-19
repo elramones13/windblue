@@ -83,7 +83,7 @@
                 <td>{{$inmersion->prof_max}}</td>
                 <td>{{$inmersion->num_buceadores}}</td>
                 <td>
-                    <a href="{{url('/instructores')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/inmersiones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
                 </td>
                 <td>
                     <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
