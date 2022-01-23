@@ -6,7 +6,6 @@ use App\Http\Controllers\BuceadorController;
 use App\Http\Controllers\InmersionController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\DudasController;
-use App\Http\Controllers\Instructor;
 use App\Http\Controllers\LocalizacionController;
 
 /*
@@ -42,6 +41,8 @@ Route::get('/inmersionespdf',[InmersionController::class, 'imprimir']);
 
 Route::get('dudas',[DudasController::class, 'index'])->name('dudas.index');
 Route::post('dudas',[DudasController::class, 'store'])->name('dudas.store');
+
+Route::get('/localizaciones/grafica',[GraficaController::class, 'grafica']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

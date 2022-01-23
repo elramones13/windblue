@@ -44,6 +44,7 @@
     @if(count($localizaciones))
     <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
     <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary" padding="10px">Nueva localización</a>
+    <a href=" {{url('/localizaciones/grafica')}}" class="btn btn-warning" padding="10px">Gráfica</a>
     <table id="tabla_localizaciones" class="table table-striped table-bordered">
         <thead>
             <tr>
