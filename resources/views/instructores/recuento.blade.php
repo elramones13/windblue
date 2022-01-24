@@ -50,7 +50,7 @@
 <form action="{{url('/instructores/')}}/{{$instructores->id}}" method="post">
     <h1 id="titulot"> Recuento de Inmersiones de {{$instructores->nombre}} con ID {{$instructores->id}}</h1>
     <a href=" {{url('/instructores')}}" class="btn btn-success" padding="10px">Volver</a>
-    <a href=" {{url('/instructorespdf')}}/{{$instructores->id}}" class="btn btn-danger" padding="10px">Generar PDF</a>
+    <a href=" {{url('/instructorespdf')}}/{{$instructores->id}}" class="btn btn-danger fas fa-file-pdf" padding="10px"></a>
     @if(count($inmersiones)>0)
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
         <thead>

@@ -7,17 +7,7 @@ use App\Http\Controllers\InmersionController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\DudasController;
 use App\Http\Controllers\LocalizacionController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\GraficaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +17,8 @@ Route::resource('/buceadores', BuceadorController::class);
 Route::resource('/instructores', InstructorController::class);
 Route::resource('/inmersiones', InmersionController::class);
 Route::resource('/localizaciones', LocalizacionController::class);
+Route::resource('/grafica',GraficaController::class);
+
 
 Route::get('/instructorespdf/{instructor_id}',[InstructorController::class, 'logs'])->name('pdfs.instructores');
 Route::get('/instructores/{instructor_id}/mostrar',[InstructorController::class, 'show'])->name('instructores.show');

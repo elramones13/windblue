@@ -42,9 +42,8 @@
 <body>
     <h1 id="titulot"> Tabla de Localizaciones</h1>
     @if(count($localizaciones))
-    <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
-    <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary" padding="10px">Nueva localización</a>
-    <a href=" {{url('/localizaciones/grafica')}}" class="btn btn-warning" padding="10px">Gráfica</a>
+    <a href=" {{url('/dashboard')}}" class="btn btn-success fas fa-home" padding="10px"></a>
+    <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary fas fa-plus-circle" padding="10px"></a>    <a href=" {{url('/grafica')}}" class="btn btn-warning fas fa-chart-pie" padding="10px"></a>
     <table id="tabla_localizaciones" class="table table-striped table-bordered">
         <thead>
             <tr>
@@ -71,13 +70,13 @@
                 <td>{{$localizacion->localidad}}</td>
                 <td><a href="{{url('/localizaciones')}}/{{$localizacion->id}}/buceos" class='btn btn-warning btn-sm'>{{$localizacion->inmersiones->count()}}</a></td>
                 <td>
-                    <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/mapas" class='btn btn-info btn-sm edit'>Mapa</a>
+                    <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/mapas" class='btn btn-info btn-sm fas fa-map-marked-alt'></a>
                 </td>
                 <td>
-                    <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/localizaciones')}}/{{$localizacion->id}}/edit" class='btn btn-info btn-sm fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
             @endforeach

@@ -49,9 +49,9 @@
 <body>
     <h1 id="titulot"> Tabla de Inmersiones</h1>
     @if(count($inmersiones))
-    <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
-    <a href=" {{url('/inmersiones/create')}}" class="btn btn-primary" padding="10px">Nueva inmersion</a>
-    <a href=" {{url('/inmersionespdf')}}" class="btn btn-danger" padding="10px">Generar PDF</a>
+    <a href=" {{url('/dashboard')}}" class="btn btn-success fas fa-home" padding="10px"></a>
+    <a href=" {{url('/inmersiones/create')}}" class="btn btn-primary fas fa-plus-circle" padding="10px"></a>    <a href=" {{url('/grafica')}}" class="btn btn-warning fas fa-chart-pie" padding="10px"></a>
+    <a href=" {{url('/inmersionespdf')}}" class="btn btn-danger fas fa-file-pdf" padding="10px"></a>
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
         <thead>
             <tr>
@@ -66,8 +66,8 @@
                 <th>Profundidad Máxima (metros)</th>
                 <th>Instructor ID</th>
                 <th>Nº Buceadores</th>
-                <th></th>
-                <th></th>
+                <th>Editar Inmersión</th>
+                <th>Borrar Inmersión</th>
             </tr>
         </thead>
         <tbody>
@@ -85,10 +85,10 @@
                 <td><a href="{{url('/instructores')}}/{{$inmersion->instructor_id}}/mostrar" class='btn btn-primary btn-sm'>{{$inmersion->instructor_id}}</a></td>
                 <td>{{$inmersion->num_buceadores}}</td>
                 <td>
-                    <a href="{{url('/inmersiones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/inmersiones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
             @endforeach

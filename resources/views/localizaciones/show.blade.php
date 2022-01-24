@@ -42,7 +42,7 @@
 <body>
 <form action="{{url('/localizaciones/')}}/{{$localizaciones->id}}" method="post">
     <h1 id="titulot"> Información de {{$localizaciones->nombre}} ID {{$localizaciones->id}}</h1>
-    <a href=" {{url('/inmersiones')}}" class="btn btn-success" padding="10px">Volver</a>
+    <a href=" {{url('/inmersiones')}}" class="btn btn-success fas fa-step-backward" padding="10px"></a>
     <table id="tabla_localizaciones" class="table table-striped table-bordered">
         <thead>
             <tr>
@@ -69,10 +69,10 @@
                     <a href="{{url('/localizaciones')}}/{{$localizaciones->id}}/mapas" class='btn btn-info btn-sm edit'>Mapa</a>
                 </td>
                 <td>
-                    <a href="{{url('/localizaciones')}}/{{$localizaciones->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/localizaciones')}}/{{$localizaciones->id}}/edit" class='btn btn-info btn-sm fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
         </tbody>

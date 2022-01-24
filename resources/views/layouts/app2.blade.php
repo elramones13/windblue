@@ -15,7 +15,7 @@
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-  
+  <script src='https://kit.fontawesome.com/edb8698070.js' crossorigin='anonymous'></script>  
   <style>
     body {
       margin: 40px;
@@ -27,6 +27,9 @@
       font-size: 1em;
     }
 
+    .fas {
+      font-size: 25px;
+    }
     #logout {
       margin: 20px;
     }
@@ -88,7 +91,24 @@
     .logo {
       text-align: center;
     }
-
+    .visible_menu span:nth-child(1){
+	transform: rotate(45deg) translate(-2px,1px); 
+}
+ 
+.visible_menu span:nth-child(2){
+	opacity: 0;
+}
+ 
+.visible_menu span:nth-child(3){
+	transform: rotate(-45deg) translate(-3px,3px); 
+}
+.visible_menu nav{
+	left: 0;
+	opacity: 1;
+}
+.visible_menu #content{
+      transform: translateX(260px);
+}
     .style-2 {
       width: 100%;
       text-align: center;
@@ -109,10 +129,12 @@
       font-size: 2em;
       padding: 5px;
       background-color: white;
+
     }
 
     .style-2 a:hover {
       transition: 1.5s;
+      text-decoration: none;
     }
 
     .style-2 a:before {
@@ -208,6 +230,41 @@
       text-align: center;
       text-decoration: underline;
     }
+
+@media (max-width: 810px) {
+  #hamburguesa{
+    display:none;
+  }
+}
+
+@media (max-width: 1523px) {
+  .style-2 a {
+    font-size:2em !important;
+  }
+  body{
+    font-size:.5em;
+  }
+}
+@media (max-width: 1359px) {
+  .style-2 a {
+    font-size:1.5em !important;
+  }
+}
+@media (max-width: 1112px) {
+  .style-2 a {
+    font-size:1.2em !important;
+  }
+}
+@media (max-width: 999px) {
+  .style-2 a {
+    font-size:1em !important;
+  }
+}
+@media (max-width: 897px) {
+  .style-2 a {
+    font-size:.8em !important;
+  }
+}
   </style>
 </head>
 

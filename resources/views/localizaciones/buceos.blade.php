@@ -43,7 +43,7 @@
 <body></body>
 <form action="{{url('/localizaciones/')}}/{{$localizaciones->id}}" method="post">
     <h1 id="titulot"> Recuento de Inmersiones {{$localizaciones->nombre}} ID {{$localizaciones->id}}</h1>
-    <a href=" {{url('/localizaciones')}}" class="btn btn-success" padding="10px">Volver</a>
+    <a href=" {{url('/localizaciones')}}" class="btn btn-success fas fa-step-backward" padding="10px"></a>
     @if(count($inmersiones)>0)
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
         <thead>
@@ -76,10 +76,10 @@
                 <td><a href="{{url('/instructores')}}/{{$inmersion->instructor_id}}/mostrar" class='btn btn-primary btn-sm'>{{$inmersion->instructor_id}}</a></td>
                 <td>{{$inmersion->num_buceadores}}</td>
                 <td>
-                    <a href="{{url('/localizaciones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/inmersiones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
             @endforeach

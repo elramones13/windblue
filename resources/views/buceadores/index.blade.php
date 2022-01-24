@@ -42,8 +42,8 @@
 <body>
     <h1 id="titulot"> Tabla de Buceadores</h1>
     @if(count($buceadores))
-    <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
-    <a href=" {{url('/buceadores/create')}}" class="btn btn-primary" padding="10px">Nuevo buceador</a>
+    <a href=" {{url('/dashboard')}}" class="btn btn-success fas fa-home" padding="10px"></a>
+    <a href=" {{url('/buceadores/create')}}" class="btn btn-primary fas fa-user-plus" padding="10px"></a>
     <table id="tabla_buceadores" class="table table-striped table-bordered">
         <thead>
             <tr>
@@ -77,10 +77,10 @@
                 <td>{{$buceador->telefono}}</td>
                 <td>{{$buceador->pais}}</td>
                 <td>
-                    <a href="{{url('/buceadores')}}/{{$buceador->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/buceadores')}}/{{$buceador->id}}/edit" class='btn btn-info btn-sm fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
             @endforeach

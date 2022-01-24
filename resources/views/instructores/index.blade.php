@@ -42,9 +42,8 @@
 <body>
     <h1 id="titulot"> Tabla de Instructores</h1>
     @if(count($instructores))
-    <a href=" {{url('/dashboard')}}" class="btn btn-success" padding="10px">Inicio</a>
-    <a href=" {{url('/instructores/create')}}" class="btn btn-primary" padding="10px">Nuevo instructor</a>
-    <table id="tabla_instructores" class="table table-striped table-bordered ">
+    <a href=" {{url('/dashboard')}}" class="btn btn-success fas fa-home" padding="10px"></a>
+    <a href=" {{url('/instructores/create')}}" class="btn btn-primary fas fa-user-plus" padding="10px"></a>    <table id="tabla_instructores" class="table table-striped table-bordered ">
         <thead>
             <tr>
                 <th>Id</th>
@@ -77,10 +76,10 @@
                 <td>{{$instructor->cert_instructor}}</td>
                 <td><a href="{{url('/instructores')}}/{{$instructor->id}}/recuento" class='btn btn-warning btn-sm'>{{$instructor->inmersiones->count()}}</a></td>
                 <td>
-                    <a href="{{url('/instructores')}}/{{$instructor->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/instructores')}}/{{$instructor->id}}/edit" class='btn btn-info btn-sm fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
             @endforeach

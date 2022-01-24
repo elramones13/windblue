@@ -21,8 +21,8 @@ class CreateInmersionsTable extends Migration
             $table->string('instructor_id');
             $table->integer('num_buceadores');
 
-            $table->foreign('localizacion_id')->references('id')->on('localizaciones')->onDelete("cascade");
-            $table->foreign('instructor_id')->references('id')->on('instructores')->onDelete("cascade");
+            $table->foreign('localizacion_id')->references('id')->on('localizaciones')->onDelete('cascade');
+            $table->foreign('instructor_id')->references('id')->on('instructores')->onDelete('cascade');
         });
     }
     public function down()
