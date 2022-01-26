@@ -43,7 +43,8 @@
     <h1 id="titulot"> Tabla de Localizaciones</h1>
     @if(count($localizaciones))
     <a href=" {{url('/dashboard')}}" class="btn btn-success fas fa-home" padding="10px"></a>
-    <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary fas fa-plus-circle" padding="10px"></a>    <a href=" {{url('/grafica')}}" class="btn btn-warning fas fa-chart-pie" padding="10px"></a>
+    <a href=" {{url('/localizaciones/create')}}" class="btn btn-primary fas fa-plus-circle" padding="10px"></a>    
+    <a href=" {{url('/grafica_localizaciones')}}" class="btn btn-warning fas fa-chart-pie" padding="10px"></a>
     <table id="tabla_localizaciones" class="table table-striped table-bordered">
         <thead>
             <tr>

@@ -42,7 +42,7 @@
 <body>
 <form action="{{url('/instructores/')}}/{{$instructores->id}}" method="post">
     <h1 id="titulot"> Información de {{$instructores->nombre}} con ID {{$instructores->id}}</h1>
-    <a href=" {{url('/inmersiones')}}" class="btn btn-success" padding="10px">Volver</a>
+    <a href=" {{url('/inmersiones')}}" class="btn btn-success fas fa-step-backward" padding="10px"></a>
     <table id="tabla_instructores" class="table table-striped table-bordered">
         <thead>
             <tr>
@@ -71,12 +71,12 @@
                 <td>{{$instructores->telefono}}</td>
                 <td>{{$instructores->pais}}</td>
                 <td>{{$instructores->cert_instructor}}</td>
-                <td><a href="{{url('/instructores')}}/{{$instructores->id}}/recuento" class='btn btn-success btn-sm'>{{$instructores->inmersiones->count()}}</a></td>
+                <td><a href="{{url('/instructores')}}/{{$instructores->id}}/recuento" class='btn btn-success btn-sm '>{{$instructores->inmersiones->count()}}</a></td>
                 <td>
-                    <a href="{{url('/instructores')}}/{{$instructores->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/instructores')}}/{{$instructores->id}}/edit" class='btn btn-info btn-sm edit fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
         </tbody>

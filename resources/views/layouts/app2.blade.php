@@ -239,30 +239,26 @@
 
 @media (max-width: 1523px) {
   .style-2 a {
-    font-size:2em !important;
+    font-size:2.5em !important;
   }
   body{
     font-size:.5em;
   }
 }
-@media (max-width: 1359px) {
-  .style-2 a {
-    font-size:1.5em !important;
-  }
-}
+
 @media (max-width: 1112px) {
   .style-2 a {
-    font-size:1.2em !important;
+    font-size:2em !important;
   }
 }
 @media (max-width: 999px) {
   .style-2 a {
-    font-size:1em !important;
+    font-size:1.8em !important;
   }
 }
 @media (max-width: 897px) {
   .style-2 a {
-    font-size:.8em !important;
+    font-size:1.2em !important;
   }
 }
   </style>

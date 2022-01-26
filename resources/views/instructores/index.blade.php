@@ -44,6 +44,7 @@
     @if(count($instructores))
     <a href=" {{url('/dashboard')}}" class="btn btn-success fas fa-home" padding="10px"></a>
     <a href=" {{url('/instructores/create')}}" class="btn btn-primary fas fa-user-plus" padding="10px"></a>    <table id="tabla_instructores" class="table table-striped table-bordered ">
+    <a href=" {{url('/grafica_instructores')}}" class="btn btn-warning fas fa-chart-pie" padding="10px"></a>
         <thead>
             <tr>
                 <th>Id</th>

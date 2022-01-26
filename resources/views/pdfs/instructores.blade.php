@@ -1,5 +1,4 @@
 @extends("layouts.app4")
-
 @section("contenido")
     <h1 id="titulot">Logs de Inmersiones del Instructor {{$instructores->nombre}} con ID {{$instructores->id}}</h1>
     <form action="{{url('/instructorespdf/')}}/{{$instructores->id}}" method="post">
@@ -39,5 +38,4 @@
     @else
         <h1>No existen registros para inmersiones</h1>
     @endif
-
 @endsection

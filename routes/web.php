@@ -17,8 +17,9 @@ Route::resource('/buceadores', BuceadorController::class);
 Route::resource('/instructores', InstructorController::class);
 Route::resource('/inmersiones', InmersionController::class);
 Route::resource('/localizaciones', LocalizacionController::class);
-Route::resource('/grafica',GraficaController::class);
 
+Route::get('/grafica_localizaciones',[GraficaController::class, 'localizaciones'])->name('grafica.localizaciones');
+Route::get('/grafica_instructores',[GraficaController::class, 'instructores'])->name('grafica.instructores');
 
 Route::get('/instructorespdf/{instructor_id}',[InstructorController::class, 'logs'])->name('pdfs.instructores');
 Route::get('/instructores/{instructor_id}/mostrar',[InstructorController::class, 'show'])->name('instructores.show');

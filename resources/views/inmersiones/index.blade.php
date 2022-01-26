@@ -50,7 +50,7 @@
     <h1 id="titulot"> Tabla de Inmersiones</h1>
     @if(count($inmersiones))
     <a href=" {{url('/dashboard')}}" class="btn btn-success fas fa-home" padding="10px"></a>
-    <a href=" {{url('/inmersiones/create')}}" class="btn btn-primary fas fa-plus-circle" padding="10px"></a>    <a href=" {{url('/grafica')}}" class="btn btn-warning fas fa-chart-pie" padding="10px"></a>
+    <a href=" {{url('/inmersiones/create')}}" class="btn btn-primary fas fa-plus-circle" padding="10px"></a>
     <a href=" {{url('/inmersionespdf')}}" class="btn btn-danger fas fa-file-pdf" padding="10px"></a>
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
         <thead>

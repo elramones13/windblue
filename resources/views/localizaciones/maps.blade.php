@@ -8,7 +8,7 @@
 <form action="{{url('/localizaciones/')}}/{{$localizaciones->id}}" method="post">
     <h1 style="text-align:center;text-decoration:underline;">Mapa de {{$localizaciones->nombre}}</h1>
 
-    <a style="margin:20px;"href="{{url('/localizaciones')}}" class="btn btn-success" padding="10px">Volver</a>
+    <a style="margin:20px;"href="{{url('/localizaciones')}}" class="btn btn-success fas fa-step-backward" padding="10px"></a>
 <div id="map"></div>
 <script>
         var greenIcon = L.icon({

@@ -49,7 +49,7 @@
 <body></body>
 <form action="{{url('/instructores/')}}/{{$instructores->id}}" method="post">
     <h1 id="titulot"> Recuento de Inmersiones de {{$instructores->nombre}} con ID {{$instructores->id}}</h1>
-    <a href=" {{url('/instructores')}}" class="btn btn-success" padding="10px">Volver</a>
+    <a href=" {{url('/instructores')}}" class="btn btn-success fas fa-step-backward" padding="10px"></a>
     <a href=" {{url('/instructorespdf')}}/{{$instructores->id}}" class="btn btn-danger fas fa-file-pdf" padding="10px"></a>
     @if(count($inmersiones)>0)
     <table id="tabla_inmersiones" class="table table-striped table-bordered ">
@@ -65,8 +65,8 @@
                 <th>Litros de la botella</th>
                 <th>Profundidad Máxima</th>
                 <th>Nº Buceadores</th>
-                <th></th>
-                <th></th>
+                <th>Editar Inmersiones</th>
+                <th>Borrar Inmersiones</th>
             </tr>
         </thead>
         <tbody>
@@ -83,10 +83,10 @@
                 <td>{{$inmersion->prof_max}}</td>
                 <td>{{$inmersion->num_buceadores}}</td>
                 <td>
-                    <a href="{{url('/inmersiones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit'>Editar</a>
+                    <a href="{{url('/inmersiones')}}/{{$inmersion->id}}/edit" class='btn btn-info btn-sm edit fas fa-edit'></a>
                 </td>
                 <td>
-                    <a href="#" class='btn btn-danger btn-sm borrar'>Borrar</a>
+                    <a href="#" class='btn btn-danger btn-sm borrar fas fa-trash'></a>
                 </td>
             </tr>
             @endforeach
