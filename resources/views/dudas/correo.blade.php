@@ -7,12 +7,12 @@
     <title>Dudas</title>
 </head>
 <body>
-    <h3>Windblue Sports Asesores</h3>
-    <p>Formulario para Dudas</p>
-    <p>Nombre: {{$dudas['nombre']}}</p>
-    <p>Apellidos: {{$dudas['apellidos']}}</p>
-    <p>Correo Electrónico: {{$dudas['email']}}</p>
-    <p>Mensaje: {{$dudas['duda']}}</p>
-    <p>Esto es una copia de su duda. Abstengase de contestar</p>
+    <h3>Dudas sobre Windblue Sports</h3>
+    <p>Formulario para resolver las dudas</p>
+    <p>Nombre: {{$formulario['nombre']}}</p>
+    <p>Apellidos: {{$formulario['apellidos']}}</p>
+    <p>Correo Electrónico: {{$formulario['email']}}</p>
+    <p>Mensaje: {{$formulario['duda']}}</p>
+    <p>Este correo fue enviado para confirmar su duda en la página de Windblue Sports</p>
 </body>
 </html>

@@ -215,6 +215,9 @@
     .style-2 a:nth-child(6) {
       animation: show 0.5s 0.6s ease 1 both;
     }
+    .style-2 a:nth-child(7) {
+      animation: show 0.5s 0.6s ease 1 both;
+    }
 
     table {
       table-layout: fixed;
@@ -248,17 +251,17 @@
 
 @media (max-width: 1112px) {
   .style-2 a {
-    font-size:2em !important;
+    font-size:1.8em !important;
   }
 }
 @media (max-width: 999px) {
   .style-2 a {
-    font-size:1.8em !important;
+    font-size:1.6em !important;
   }
 }
 @media (max-width: 897px) {
   .style-2 a {
-    font-size:1.2em !important;
+    font-size:1em !important;
   }
 }
   </style>
@@ -275,6 +278,7 @@
         <a href="{{ route('instructores.index') }}" class="">Instructores</a>
         <a href="{{ route('localizaciones.index') }}" class="">Localizaciones</a>
         <a href="{{ route('inmersiones.index') }}" class="">Inmersiones</a>
+        <a href="{{ route('dudas.index') }}" class="">Dudas</a>
         <a id="logout" href="route('logout')" onclick="event.preventDefault();
         this.closest('form').submit();">Log out</a>
       </nav>

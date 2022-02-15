@@ -7,16 +7,16 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class GestionMailable extends Mailable
+class CorreoGestion extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "Dudas Windblue Sports";
-    public $dudas;
+    public $subject = "Formulario de Windblue Sports";
+    public $formulario;
 
-    public function __construct($dudas)
+    public function __construct($formulario)
     {
-        $this->duda = $dudas;
+        $this->formulario = $formulario;
     }
 
     public function build()
