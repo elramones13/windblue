@@ -187,6 +187,10 @@
     .style-2 a:nth-child(7) {
       animation: show 0.5s 0.6s ease 1 both;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c2d7c20b8cf17c65d20da26ff7809db44be2c1c9
     table {
       table-layout: fixed;
     }

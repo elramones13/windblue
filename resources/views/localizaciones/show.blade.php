@@ -66,7 +66,7 @@
                 <td>{{$localizaciones->localidad}}</td>
                 <td><a href="{{url('/localizaciones')}}/{{$localizaciones->id}}/buceos" class='btn btn-warning btn-sm'>{{$localizaciones->inmersiones->count()}}</a></td>
                 <td>
-                    <a href="{{url('/localizaciones')}}/{{$localizaciones->id}}/mapas" class='btn btn-info btn-sm edit'>Mapa</a>
+                    <a href="{{url('/localizaciones')}}/{{$localizaciones->id}}/mapas" class='btn btn-info btn-sm fas fa-map-marked-alt'></a>
                 </td>
                 <td>
                     <a href="{{url('/localizaciones')}}/{{$localizaciones->id}}/edit" class='btn btn-info btn-sm fas fa-edit'></a>
