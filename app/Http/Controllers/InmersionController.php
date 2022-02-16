@@ -14,7 +14,9 @@ class InmersionController extends Controller
     public function index()
     {
         $inmersiones = Inmersion::all();
-        return view('inmersiones.index', compact('inmersiones'));
+        $localizaciones = Localizacion::all();
+        $instructores = Instructor::all();
+        return view('inmersiones.index',compact('inmersiones','localizaciones','instructores'));
     }
     public function imprimir(){
         $inmersiones = Inmersion::all();

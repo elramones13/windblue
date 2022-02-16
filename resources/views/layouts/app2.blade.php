@@ -24,21 +24,16 @@
       box-shadow: 0px 0px 30px;
       border: 1px solid lightgrey;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 1em;
     }
-
     .fas {
       font-size: 25px;
     }
     #logout {
       margin: 20px;
     }
-
     html {
       background-image: url("http://www.dinpattern.com/tiles/presence-ii.png");
     }
-
-
     .dataTables_wrapper .dataTables_length,
     .dataTables_wrapper .dataTables_filter,
     .dataTables_wrapper .dataTables_info,
@@ -46,24 +41,19 @@
     .dataTables_wrapper .dataTables_paginate {
       color: black;
     }
-
     .dataTables_wrapper .dataTables_length select {
       background-color: white;
     }
-
     .dataTables_wrapper .dataTables_filter input {
       background-color: white;
     }
-
     th.sorting {
       background-color: lightgrey;
     }
-
     .dataTables_wrapper .dataTables_paginate .paginate_button {
       padding: 0em;
       margin: 0em;
     }
-
     .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
       color: white !important;
       background-color: none;
@@ -74,20 +64,16 @@
       background: -o-linear-gradient(top, #585858 0%, #111 100%);
       background: linear-gradient(to bottom, #585858 0%, #111 100%);
     }
-
     #login {
       margin: 0 auto;
     }
-
     th {
       text-align: center;
     }
-
     #titulot {
       text-align: center;
       text-decoration: underline;
     }
-
     .logo {
       text-align: center;
     }
@@ -115,7 +101,6 @@
       margin-top: 10px;
       margin-bottom: 5%;
     }
-
     .style-2 a {
       font-family: "Oswald", sans-serif;
       font-weight: 500;
@@ -129,14 +114,11 @@
       font-size: 2em;
       padding: 5px;
       background-color: white;
-
     }
-
     .style-2 a:hover {
       transition: 1.5s;
       text-decoration: none;
     }
-
     .style-2 a:before {
       content: "";
       position: absolute;
@@ -147,96 +129,81 @@
       top: 47%;
       animation: out 0.4s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
-
     .style-2 a:hover:before {
       animation: in 0.4s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
-
     @keyframes in {
       0% {
         width: 0;
         left: 0;
         right: auto;
       }
-
       100% {
         left: 0;
         right: auto;
         width: 100%;
       }
     }
-
     @keyframes out {
       0% {
         width: 100%;
         left: auto;
         right: 0;
       }
-
       100% {
         width: 0;
         left: auto;
         right: 0;
       }
     }
-
     @keyframes show {
       0% {
         opacity: 0;
         transform: translateY(-10px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
     .style-2 a:nth-child(1) {
       animation: show 0.5s 0.1s ease 1 both;
     }
-
     .style-2 a:nth-child(2) {
       animation: show 0.5s 0.2s ease 1 both;
     }
-
     .style-2 a:nth-child(3) {
       animation: show 0.5s 0.3s ease 1 both;
     }
-
     .style-2 a:nth-child(4) {
       animation: show 0.5s 0.4s ease 1 both;
     }
-
     .style-2 a:nth-child(5) {
       animation: show 0.5s 0.5s ease 1 both;
     }
-
     .style-2 a:nth-child(6) {
       animation: show 0.5s 0.6s ease 1 both;
     }
-
+    .style-2 a:nth-child(7) {
+      animation: show 0.5s 0.6s ease 1 both;
+    }
     table {
       table-layout: fixed;
     }
-
     table td {
       word-wrap: break-word;
       max-width: 400px;
       text-align: center;
     }
-
     #titulot {
       text-align: center;
       text-decoration: underline;
     }
-
 @media (max-width: 810px) {
   #hamburguesa{
     display:none;
   }
 }
-
 @media (max-width: 1523px) {
   .style-2 a {
     font-size:2.5em !important;
@@ -245,20 +212,19 @@
     font-size:.5em;
   }
 }
-
 @media (max-width: 1112px) {
-  .style-2 a {
-    font-size:2em !important;
-  }
-}
-@media (max-width: 999px) {
   .style-2 a {
     font-size:1.8em !important;
   }
 }
+@media (max-width: 999px) {
+  .style-2 a {
+    font-size:1.6em !important;
+  }
+}
 @media (max-width: 897px) {
   .style-2 a {
-    font-size:1.2em !important;
+    font-size:1em !important;
   }
 }
   </style>
@@ -275,6 +241,7 @@
         <a href="{{ route('instructores.index') }}" class="">Instructores</a>
         <a href="{{ route('localizaciones.index') }}" class="">Localizaciones</a>
         <a href="{{ route('inmersiones.index') }}" class="">Inmersiones</a>
+        <a href="{{ route('dudas.index') }}" class="">Dudas</a>
         <a id="logout" href="route('logout')" onclick="event.preventDefault();
         this.closest('form').submit();">Log out</a>
       </nav>

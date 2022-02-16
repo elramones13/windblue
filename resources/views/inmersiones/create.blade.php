@@ -13,7 +13,7 @@
     <label for="prof_max">Localización</label>
     <select class="form-control" id="select_localizacion" name="localizacion_id">
         @foreach($localizaciones as $localizacion )
-          <option value="{{$localizacion->id}}">{{$localizacion->id}} - {{$localizacion->nombre}}</option>
+          <option value="{{$localizacion->id}}">{{$localizacion->nombre}}</option>
         @endforeach
     </select>
     </div>
@@ -49,7 +49,7 @@
     <label for="instructor_id">Instructor</label>
     <select class="form-control" id="select_instructor" name="instructor_id">
         @foreach($instructores as $instructor )
-          <option value="{{$instructor->id}}">{{$instructor->id}} - {{$instructor->nombre}} {{$instructor->apellido1}}</option>
+          <option value="{{$instructor->id}}">{{$instructor->nombre}} {{$instructor->apellido1}}</option>
         @endforeach
     </select>
     </div>

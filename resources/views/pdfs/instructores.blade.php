@@ -22,7 +22,7 @@
             @foreach($instructores->inmersiones as $inmersion)
                     <tr data-id='{{$inmersion->id}}'>
                     <td>{{$inmersion->id}}</td>
-                    <td><a href="{{url('https://8000-elramones13-windblue-9slx635dzm2.ws-eu27.gitpod.io/localizaciones')}}/{{$inmersion->localizacion_id}}/mostrar">{{$inmersion->localizacion_id}}</a></td>
+                    <td><a href="{{url('https://8000-sapphire-tahr-0ccckqzzjp3.ws-eu32.gitpod.io/localizaciones')}}/{{$inmersion->localizacion_id}}/mostrar">{{$inmersion->localizacion_id}}</a></td>
                     <td>{{$inmersion->fecha}}</td>
                     <td>{{$inmersion->t_total}}</td>
                     <td>{{$inmersion->temperatura}}</td>

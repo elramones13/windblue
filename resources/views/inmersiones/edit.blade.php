@@ -9,7 +9,7 @@
         <label for="localizacion_id">Lugar</label>
         <select class="form-control" id="select_localizacion" name="localizacion_id">
         @foreach($localizaciones as $localizacion)
-                <option type="text" class="form-control" id="localizacion_id" name="localizacion_id" value="{{$localizacion->id}}">{{$localizacion->id}} - {{$localizacion->nombre}}</option>
+                <option type="text" class="form-control" id="localizacion_id" name="localizacion_id" value="{{$localizacion->id}}">{{$localizacion->nombre}}</option>
             @endforeach
         </select>    
     </div>
@@ -45,8 +45,8 @@
         <label for="instructor_id">Instructor</label>
         <select class="form-control" id="select_instructor" name="instructor_id">
         @foreach($instructores as $instructor )
-                <option type="text" class="form-control" id="instructor_id" name="instructor_id" value="{{$instructor->id}}">{{$instructor->id}} - {{$instructor->nombre}} {{$instructor->apellido1}}</option>
-            @endforeach
+                <option type="text" class="form-control" id="instructor_id" name="instructor_id" value="{{$instructor->id}}">{{$instructor->nombre}} {{$instructor->apellido1}}</option>
+        @endforeach
         </select>
     </div>
     <div class="form-group">
