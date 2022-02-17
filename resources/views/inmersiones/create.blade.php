@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
         <label for="fecha">Fecha</label>
-        <input type="text" class="form-control" id="fecha" name="fecha" placeholder="FECHA">
+        <input type="date" class="form-control" id="fecha" name="fecha" placeholder="FECHA">
     </div>
     <div class="form-group">
         <label for="t_total">Tiempo Total</label>

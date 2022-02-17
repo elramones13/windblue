@@ -187,6 +187,7 @@
     .style-2 a:nth-child(7) {
       animation: show 0.5s 0.6s ease 1 both;
     }
+
     table {
       table-layout: fixed;
     }

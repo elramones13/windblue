@@ -21,5 +21,6 @@ class DudasController extends Controller
         $formulario= new CorreoGestion($request->all());
         Mail::to('alejandroinfor13@gmail.com')->send($formulario);
         return redirect()->route('dashboard')->with('info','La duda fue enviada al equipo de Windblue Sports');
+        return redirect()->route('dudas.index')->with('info','Duda enviada al equipo de Windblue Sports');
     }
 }

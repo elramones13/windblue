@@ -11,8 +11,11 @@ class CorreoGestion extends Mailable
 {
     use Queueable, SerializesModels;
 
+<<<<<<< HEAD
     use Queueable, SerializesModels;
 
+=======
+>>>>>>> c2d7c20b8cf17c65d20da26ff7809db44be2c1c9
     public $subject = "Formulario de Windblue Sports";
     public $formulario;
 

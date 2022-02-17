@@ -15,7 +15,7 @@
     </div>
     <div class="form-group">
         <label for="fecha">Fecha</label>
-        <input type="text" class="form-control" id="fecha" name="fecha" placeholder="fecha" value="{{$inmersiones->fecha}}">
+        <input type="date" class="form-control" id="fecha" name="fecha" placeholder="fecha" value="{{$inmersiones->fecha}}">
     </div>
     <div class="form-group">
         <label for="t_total">Tiempo Total</label>

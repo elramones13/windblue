@@ -23,7 +23,7 @@
     </div>
     <div class="form-group">
         <label for="f_nacimiento">Fecha Nacimiento</label>
-        <input type="text" class="form-control" id="f_nacimiento" name="f_nacimiento" placeholder="f_nacimiento" value="{{$instructores->f_nacimiento}}">
+        <input type="date" class="form-control" id="f_nacimiento" name="f_nacimiento" placeholder="f_nacimiento" value="{{$instructores->f_nacimiento}}">
     </div>
     <label for="email">Email</label>
     <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="{{$instructores->email}}">

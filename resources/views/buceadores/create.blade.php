@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
         <label for="f_nacimiento">Fecha Nacimiento</label>
-        <input type="text" class="form-control" id="f_nacimiento" name="f_nacimiento" placeholder="30-12-2020">
+        <input type="date" class="form-control" id="f_nacimiento" name="f_nacimiento" placeholder="30-12-2020">
     </div>
     <div class="form-group">
         <label for="t_buceo">Título de buceo</label>
